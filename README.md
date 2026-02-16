@@ -1,4 +1,4 @@
-# 🐭 vs 🐱: Simulador de Gato y Ratón con IA
+# 🐱 vs 🐭: Simulador de Gato y Ratón con IA
 ### Un juego de estrategia por consola donde un Ratón intenta conseguir queso y escapar, mientras un Gato intenta cazarlo. El proyecto implementa algoritmos de Inteligencia Artificial clásica para la toma de decisiones.
 
 ## 📋 Tabla de Contenidos
