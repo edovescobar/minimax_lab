@@ -2,6 +2,7 @@ import os
 import time
 import random
 
+# --- CONFIGURACIÓN DEL MAPA ---
 MAPA = [
     [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1],
     [1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 2, 1],
@@ -25,9 +26,9 @@ class JuegoSimulacion:
         self.salida = (1, 3)
         self.movimientos_restantes = 80
         self.tiempo_actualizacion = 0.3
-        self.rol_usuario = rol_usuario
+        self.rol_usuario = rol_usuario # 1: Ratón, 2: Gato, 3: IA vs IA
         
-        
+        # Ajuste de dificultades
         if dificultad == "1":
             self.prob_error_gato = 0.70
             self.nombre_dif = "FÁCIL"
@@ -46,7 +47,7 @@ class JuegoSimulacion:
 
     def dibujar(self, mensaje=""):
         os.system('cls' if os.name == 'nt' else 'clear')
-        personaje = "🐭 TÚ" if self.rol_usuario == 1 else ("🐱 TÚ" if self.rol_usuario == "2" else "🤖 IA vs IA")
+        personaje = "🐭 TÚ" if self.rol_usuario == "1" else ("🐱 TÚ" if self.rol_usuario == "2" else "🤖 IA vs IA")
         print(f"=== JUGANDO COMO: {personaje} | DIFICULTAD: {self.nombre_dif} ===")
         print(f"⏳ Movs: {self.movimientos_restantes} | Queso: {'✅' if self.tiene_queso else '❌'}")
         print(f"INFO: {mensaje}")
